@@ -28,6 +28,7 @@ body {
     overflow: hidden;
 }
 
+
 /* PÁGINAS */
 
 .page {
@@ -41,6 +42,8 @@ body {
     padding: 25px;
     text-align: center;
 
+    overflow: hidden;
+
     animation: aparecer 0.8s ease;
 }
 
@@ -51,7 +54,10 @@ body {
 .content {
     width: 100%;
     max-width: 900px;
+    position: relative;
+    z-index: 2;
 }
+
 
 /* TEXTOS */
 
@@ -103,6 +109,7 @@ p {
     margin-bottom: 18px;
 }
 
+
 /* BOTÕES */
 
 button {
@@ -120,7 +127,8 @@ button {
 
     cursor: pointer;
 
-    box-shadow: 0 8px 25px rgba(49, 91, 134, 0.18);
+    box-shadow:
+        0 8px 25px rgba(49, 91, 134, 0.18);
 
     transition: 0.3s;
 }
@@ -128,6 +136,7 @@ button {
 button:hover {
     transform: translateY(-3px);
 }
+
 
 /* FOTOS */
 
@@ -175,6 +184,7 @@ button:hover {
     margin-bottom: 25px;
 }
 
+
 /* CONTADOR */
 
 .days {
@@ -189,79 +199,23 @@ button:hover {
     margin: 10px 0;
 }
 
-/* FINAL */
+
+/* FRASE FINAL */
 
 .final-text {
     font-family: 'Playfair Display', serif;
 
     font-size: clamp(27px, 5vw, 45px);
 
-    line-height: 1.3;
+    line-height: 1.35;
+
+    max-width: 750px;
+
+    margin: 0 auto;
 }
 
-/* CORAÇÕES / EMOJIS CAINDO */
 
-.falling {
-    position: fixed;
-
-    top: -60px;
-
-    pointer-events: none;
-
-    z-index: 9999;
-
-    animation:
-        cair linear forwards,
-        balancar ease-in-out infinite;
-}
-
-@keyframes cair {
-
-    from {
-        transform: translateY(-60px) rotate(0deg);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-    }
-
-}
-
-@keyframes balancar {
-
-    0% {
-        margin-left: -12px;
-    }
-
-    50% {
-        margin-left: 12px;
-    }
-
-    100% {
-        margin-left: -12px;
-    }
-
-}
-
-/* ANIMAÇÃO DAS PÁGINAS */
-
-@keyframes aparecer {
-
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-/* DETALHE AZUL/VERMELHO */
+/* DETALHES AZUIS E VERMELHOS */
 
 .decor {
     position: absolute;
@@ -300,6 +254,79 @@ button:hover {
     right: 9%;
 }
 
+
+/* EMOJIS CAINDO */
+
+.falling {
+    position: absolute;
+
+    top: -70px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation:
+        cair linear forwards,
+        balancar ease-in-out infinite;
+}
+
+
+@keyframes cair {
+
+    from {
+        transform:
+            translateY(-70px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(115vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes balancar {
+
+    0% {
+        margin-left: -12px;
+    }
+
+    50% {
+        margin-left: 12px;
+    }
+
+    100% {
+        margin-left: -12px;
+    }
+
+}
+
+
+/* ANIMAÇÃO DAS PÁGINAS */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
 /* MOBILE */
 
 @media (max-width: 600px) {
@@ -332,6 +359,7 @@ button:hover {
 <div class="decor red two"></div>
 <div class="decor three"></div>
 <div class="decor red four"></div>
+
 
 
 <!-- 1 — ENTRADA -->
@@ -398,7 +426,7 @@ continuar
 
 
 
-<!-- 3 — FLORES -->
+<!-- 3 — PRIMEIRAS FLORES -->
 
 <section class="page">
 
@@ -424,7 +452,7 @@ sem a gente perceber, acabam ficando
 guardados para sempre.
 </p>
 
-<button onclick="bouquetRain(); nextPage()">
+<button onclick="bouquetRain(); setTimeout(nextPage, 3500)">
 continuar 🌷
 </button>
 
@@ -434,7 +462,7 @@ continuar 🌷
 
 
 
-<!-- 4 — ANIVERSÁRIO / MOMENTO -->
+<!-- 4 — ANIVERSÁRIO -->
 
 <section class="page">
 
@@ -460,7 +488,7 @@ eu não vejo só uma imagem.
 Eu vejo um pedacinho da nossa história.
 </p>
 
-<button onclick="heartRain(); nextPage()">
+<button onclick="heartRain(); setTimeout(nextPage, 2500)">
 continuar ❤️
 </button>
 
@@ -495,7 +523,7 @@ O dia em que a nossa história ganhou
 oficialmente uma data para chamar de nossa.
 </p>
 
-<button onclick="heartBlueRain(); nextPage()">
+<button onclick="heartBlueRain(); setTimeout(nextPage, 2500)">
 continuar 💙
 </button>
 
@@ -505,7 +533,7 @@ continuar 💙
 
 
 
-<!-- 6 — DIAS -->
+<!-- 6 — CONTADOR -->
 
 <section class="page">
 
@@ -538,7 +566,7 @@ continuar
 
 
 
-<!-- 7 — FOTO -->
+<!-- 7 — EU AMO A NOSSA HISTÓRIA -->
 
 <section class="page">
 
@@ -546,7 +574,7 @@ continuar
 
 <img
 class="photo"
-src="3694B9CE-1D1C-4E10-8651-638044B899B5.jpeg"
+src="AD035336-7926-4907-8A3C-BAF5C21679C2.jpeg"
 alt="Nossa história"
 >
 
@@ -564,7 +592,7 @@ continuar
 
 
 
-<!-- 8 — FOTO -->
+<!-- 8 — AMO NOSSAS FOTOS -->
 
 <section class="page">
 
@@ -572,8 +600,8 @@ continuar
 
 <img
 class="photo"
-src="AD035336-7926-4907-8A3C-BAF5C21679C2.jpeg"
-alt="Nossa história"
+src="3694B9CE-1D1C-4E10-8651-638044B899B5.jpeg"
+alt="Nossas fotos"
 >
 
 <p class="caption">
@@ -596,7 +624,7 @@ continuar
 
 
 
-<!-- 9 — FOTO -->
+<!-- 9 — AGRADECIMENTO -->
 
 <section class="page">
 
@@ -629,7 +657,7 @@ continuar
 
 
 
-<!-- 10 — OUTRA FOTO -->
+<!-- 10 — IMPORTÂNCIA -->
 
 <section class="page">
 
@@ -660,7 +688,7 @@ continuar
 
 
 
-<!-- 11 — AGRADECIMENTO -->
+<!-- 11 — OBRIGADA POR NÓS -->
 
 <section class="page">
 
@@ -690,7 +718,7 @@ E eu quero continuar cuidando
 da nossa história.
 </p>
 
-<button onclick="heartRain(); nextPage()">
+<button onclick="heartRain(); setTimeout(nextPage, 2500)">
 continuar ❤️
 </button>
 
@@ -724,7 +752,7 @@ Quero continuar construindo
 uma vida ao seu lado.
 </p>
 
-<button onclick="heartBlueRain(); nextPage()">
+<button onclick="heartBlueRain(); setTimeout(nextPage, 2500)">
 mais uma coisa... 💙
 </button>
 
@@ -747,25 +775,29 @@ alt="Nós dois"
 >
 
 <p class="data">
-21.11.2024 — e tudo que ainda vem pela frente
+21.09.2026
 </p>
 
 <p class="final-text">
-Que a nossa história
-continue sendo uma
-das minhas coisas favoritas.
+Você se tornou parte de quem eu sou,
+das minhas melhores lembranças
+e dos meus planos.
+</p>
+
+<br>
+
+<p class="final-text">
+E, entre tudo que a vida ainda pode me trazer,
+o que eu mais quero é continuar tendo
+você ao meu lado.
 </p>
 
 <br>
 
 <p>
 <strong>
-Eu escolheria você de novo. ❤️💙
+Eu te amo. ❤️💙
 </strong>
-</p>
-
-<p>
-Te amo.
 </p>
 
 </div>
@@ -777,7 +809,9 @@ Te amo.
 <script>
 
 
-/* TROCA DE PÁGINAS */
+/* =========================
+   TROCA DE PÁGINAS
+========================= */
 
 let currentPage = 0;
 
@@ -802,13 +836,16 @@ function nextPage() {
 
 
 
-/* CONTADOR DESDE 21/11/2024 */
+/* =========================
+   CONTADOR DESDE 21/11/2024
+========================= */
 
 const inicio = new Date(2024, 10, 21);
 
 const hoje = new Date();
 
 inicio.setHours(0, 0, 0, 0);
+
 hoje.setHours(0, 0, 0, 0);
 
 const diferenca = hoje - inicio;
@@ -821,53 +858,70 @@ document.getElementById("contador").textContent = dias;
 
 
 
-/* EMOJIS CAINDO */
+/* =========================
+   CRIAR EMOJI CAINDO
+========================= */
 
 function createFallingEmoji(emoji) {
 
-    const element = document.createElement("div");
+    const currentPageElement =
+        document.querySelector(".page.active");
+
+    const element =
+        document.createElement("div");
 
     element.className = "falling";
 
     element.innerText = emoji;
 
+    currentPageElement.appendChild(element);
+
     element.style.left =
-        Math.random() * 100 + "vw";
+        Math.random() * 100 + "%";
 
     element.style.fontSize =
         (20 + Math.random() * 22) + "px";
 
     element.style.animationDuration =
-        (4 + Math.random() * 4) + "s";
-
-    document.body.appendChild(element);
+        (3 + Math.random() * 2) + "s";
 
     setTimeout(() => {
 
         element.remove();
 
-    }, 8500);
+    }, 6000);
 
 }
 
 
 
-/* CHUVA DE CORAÇÕES */
+/* =========================
+   CORAÇÕES VERMELHOS
+========================= */
 
 function heartRain() {
 
-    const emojis = ["❤️", "❤️", "💗", "💕"];
+    const emojis = [
+        "❤️",
+        "❤️",
+        "💗",
+        "💕"
+    ];
 
     for (let i = 0; i < 30; i++) {
 
         setTimeout(() => {
 
             const emoji =
-                emojis[Math.floor(Math.random() * emojis.length)];
+                emojis[
+                    Math.floor(
+                        Math.random() * emojis.length
+                    )
+                ];
 
             createFallingEmoji(emoji);
 
-        }, i * 90);
+        }, i * 80);
 
     }
 
@@ -875,22 +929,33 @@ function heartRain() {
 
 
 
-/* CHUVA AZUL */
+/* =========================
+   CORAÇÕES AZUIS
+========================= */
 
 function heartBlueRain() {
 
-    const emojis = ["💙", "💙", "🩵", "💙"];
+    const emojis = [
+        "💙",
+        "💙",
+        "🩵",
+        "💙"
+    ];
 
     for (let i = 0; i < 35; i++) {
 
         setTimeout(() => {
 
             const emoji =
-                emojis[Math.floor(Math.random() * emojis.length)];
+                emojis[
+                    Math.floor(
+                        Math.random() * emojis.length
+                    )
+                ];
 
             createFallingEmoji(emoji);
 
-        }, i * 80);
+        }, i * 70);
 
     }
 
@@ -898,22 +963,35 @@ function heartBlueRain() {
 
 
 
-/* CHUVA DE FLORES */
+/* =========================
+   FLORES
+========================= */
 
 function bouquetRain() {
 
-    const emojis = ["💐", "🌷", "🌹", "🌸", "💐"];
+    const emojis = [
+        "💐",
+        "🌷",
+        "🌹",
+        "🌸",
+        "💐",
+        "🌷"
+    ];
 
     for (let i = 0; i < 35; i++) {
 
         setTimeout(() => {
 
             const emoji =
-                emojis[Math.floor(Math.random() * emojis.length)];
+                emojis[
+                    Math.floor(
+                        Math.random() * emojis.length
+                    )
+                ];
 
             createFallingEmoji(emoji);
 
-        }, i * 80);
+        }, i * 70);
 
     }
 
