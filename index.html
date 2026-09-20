@@ -29,7 +29,9 @@ body {
 }
 
 
-/* PÁGINAS */
+/* =========================
+   PÁGINAS
+========================= */
 
 .page {
     position: fixed;
@@ -59,7 +61,9 @@ body {
 }
 
 
-/* TEXTOS */
+/* =========================
+   TEXTOS
+========================= */
 
 h1,
 h2 {
@@ -110,7 +114,9 @@ p {
 }
 
 
-/* BOTÕES */
+/* =========================
+   BOTÕES
+========================= */
 
 button {
     border: none;
@@ -138,7 +144,9 @@ button:hover {
 }
 
 
-/* FOTOS */
+/* =========================
+   FOTOS
+========================= */
 
 .photo {
     width: min(88vw, 620px);
@@ -185,7 +193,9 @@ button:hover {
 }
 
 
-/* CONTADOR */
+/* =========================
+   CONTADOR
+========================= */
 
 .days {
     font-family: 'Playfair Display', serif;
@@ -200,7 +210,9 @@ button:hover {
 }
 
 
-/* FRASE FINAL */
+/* =========================
+   FRASE FINAL
+========================= */
 
 .final-text {
     font-family: 'Playfair Display', serif;
@@ -215,7 +227,9 @@ button:hover {
 }
 
 
-/* DETALHES AZUIS E VERMELHOS */
+/* =========================
+   DETALHES AZUIS E VERMELHOS
+========================= */
 
 .decor {
     position: absolute;
@@ -255,7 +269,9 @@ button:hover {
 }
 
 
-/* EMOJIS CAINDO */
+/* =========================
+   EMOJIS CAINDO
+========================= */
 
 .falling {
     position: absolute;
@@ -310,7 +326,9 @@ button:hover {
 }
 
 
-/* ANIMAÇÃO DAS PÁGINAS */
+/* =========================
+   ANIMAÇÃO DAS PÁGINAS
+========================= */
 
 @keyframes aparecer {
 
@@ -327,9 +345,67 @@ button:hover {
 }
 
 
-/* MOBILE */
+/* =========================
+   ÚLTIMA PÁGINA
+========================= */
+
+.final-page {
+    padding: 18px 20px;
+}
+
+.final-page .content {
+    max-width: 760px;
+    max-height: 100vh;
+}
+
+.final-page .final-photo {
+    width: min(82vw, 620px);
+    height: min(38vh, 390px);
+
+    object-fit: cover;
+
+    margin: 0 auto 12px;
+
+    border-radius: 18px;
+}
+
+.final-page .data {
+    margin: 5px 0 20px;
+    font-size: 13px;
+}
+
+.final-page .final-text {
+    font-size: clamp(23px, 5vw, 38px);
+
+    line-height: 1.22;
+
+    max-width: 720px;
+
+    margin: 0 auto 22px;
+}
+
+.final-page .final-second {
+    margin-top: 0;
+}
+
+.final-page .love {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   AJUSTE PARA CELULAR
+========================= */
 
 @media (max-width: 600px) {
+
+    .page {
+        padding: 18px;
+    }
 
     .photo {
         height: 53vh;
@@ -343,6 +419,38 @@ button:hover {
         font-size: 15px;
     }
 
+    /* última página */
+
+    .final-page {
+        padding: 12px 18px;
+    }
+
+    .final-page .final-photo {
+        width: 82vw;
+        height: 31vh;
+
+        margin-bottom: 8px;
+    }
+
+    .final-page .data {
+        margin: 2px 0 14px;
+        font-size: 12px;
+    }
+
+    .final-page .final-text {
+        font-size: 22px;
+
+        line-height: 1.18;
+
+        margin-bottom: 15px;
+    }
+
+    .final-page .love {
+        font-size: 19px;
+
+        margin-top: 0;
+    }
+
 }
 
 </style>
@@ -353,7 +461,9 @@ button:hover {
 <body>
 
 
-<!-- DETALHES DECORATIVOS -->
+<!-- =========================
+     DETALHES DECORATIVOS
+========================= -->
 
 <div class="decor one"></div>
 <div class="decor red two"></div>
@@ -362,7 +472,9 @@ button:hover {
 
 
 
-<!-- 1 — ENTRADA -->
+<!-- =========================
+     1 — ENTRADA
+========================= -->
 
 <section class="page active">
 
@@ -390,7 +502,9 @@ entra aqui
 
 
 
-<!-- 2 — 2022 -->
+<!-- =========================
+     2 — 2022
+========================= -->
 
 <section class="page">
 
@@ -426,7 +540,9 @@ continuar
 
 
 
-<!-- 3 — PRIMEIRAS FLORES -->
+<!-- =========================
+     3 — PRIMEIRAS FLORES
+========================= -->
 
 <section class="page">
 
@@ -462,7 +578,9 @@ continuar 🌷
 
 
 
-<!-- 4 — ANIVERSÁRIO -->
+<!-- =========================
+     4 — ANIVERSÁRIO
+========================= -->
 
 <section class="page">
 
@@ -498,7 +616,9 @@ continuar ❤️
 
 
 
-<!-- 5 — OFICIALIZAÇÃO -->
+<!-- =========================
+     5 — OFICIALIZAÇÃO
+========================= -->
 
 <section class="page">
 
@@ -533,7 +653,9 @@ continuar 💙
 
 
 
-<!-- 6 — CONTADOR -->
+<!-- =========================
+     6 — CONTADOR
+========================= -->
 
 <section class="page">
 
@@ -566,7 +688,9 @@ continuar
 
 
 
-<!-- 7 — EU AMO A NOSSA HISTÓRIA -->
+<!-- =========================
+     7 — EU AMO A NOSSA HISTÓRIA
+========================= -->
 
 <section class="page">
 
@@ -574,7 +698,7 @@ continuar
 
 <img
 class="photo"
-src="AD035336-7926-4907-8A3C-BAF5C21679C2.jpeg"
+src="3694B9CE-1D1C-4E10-8651-638044B899B5.jpeg"
 alt="Nossa história"
 >
 
@@ -592,7 +716,9 @@ continuar
 
 
 
-<!-- 8 — AMO NOSSAS FOTOS -->
+<!-- =========================
+     8 — AMO NOSSAS FOTOS
+========================= -->
 
 <section class="page">
 
@@ -600,7 +726,7 @@ continuar
 
 <img
 class="photo"
-src="3694B9CE-1D1C-4E10-8651-638044B899B5.jpeg"
+src="AD035336-7926-4907-8A3C-BAF5C21679C2.jpeg"
 alt="Nossas fotos"
 >
 
@@ -624,7 +750,9 @@ continuar
 
 
 
-<!-- 9 — AGRADECIMENTO -->
+<!-- =========================
+     9 — AGRADECIMENTO
+========================= -->
 
 <section class="page">
 
@@ -657,7 +785,9 @@ continuar
 
 
 
-<!-- 10 — IMPORTÂNCIA -->
+<!-- =========================
+     10 — IMPORTÂNCIA
+========================= -->
 
 <section class="page">
 
@@ -688,7 +818,9 @@ continuar
 
 
 
-<!-- 11 — OBRIGADA POR NÓS -->
+<!-- =========================
+     11 — OBRIGADA POR NÓS
+========================= -->
 
 <section class="page">
 
@@ -728,7 +860,9 @@ continuar ❤️
 
 
 
-<!-- 12 — FUTURO -->
+<!-- =========================
+     12 — FUTURO
+========================= -->
 
 <section class="page">
 
@@ -762,9 +896,11 @@ mais uma coisa... 💙
 
 
 
-<!-- 13 — FINAL -->
+<!-- =========================
+     13 — FINAL
+========================= -->
 
-<section class="page">
+<section class="page final-page">
 
 <div class="content">
 
@@ -784,20 +920,14 @@ das minhas melhores lembranças
 e dos meus planos.
 </p>
 
-<br>
-
-<p class="final-text">
+<p class="final-text final-second">
 E, entre tudo que a vida ainda pode me trazer,
 o que eu mais quero é continuar tendo
 você ao meu lado.
 </p>
 
-<br>
-
-<p>
-<strong>
+<p class="love">
 Eu te amo. ❤️💙
-</strong>
 </p>
 
 </div>
